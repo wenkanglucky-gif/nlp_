@@ -16,7 +16,7 @@ A production-ready Flask API for legal text classification using fine-tuned Lega
 
 ### 1. Clone the repository
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/wenkanglucky-gif/nlp_
 cd nlp_
 ```
 
@@ -134,11 +134,6 @@ Pre-commit hooks automatically run:
 ### Local deployment
 ```bash
 python app.py
-```
-
-### Production deployment 
-```bash
-gunicorn -w 4 -b 0.0.0.0:5000 app:app
 ```
 
 ## Troubleshooting
