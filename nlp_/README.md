@@ -9,6 +9,7 @@ A production-ready Flask API for legal text classification using fine-tuned Lega
 -  Real-time performance monitoring
 -  Automatic anomaly detection and alerting
 -  Auto-retraining mechanism
+-  Interactive web demo interface
 -  Full test coverage
 
 
@@ -42,6 +43,14 @@ python app.py
 ```
 
 ### Make predictions
+## Option 1: Use Web Demo (Recommended)
+Open your browser and go to:
+```
+http://localhost:5000/demo
+```
+Type legal text in the box and click "Classify Text" to see prediction results in real-time.
+
+## Option 2: Use API directly
 ```bash
 curl -X POST http://localhost:5000/predict \
   -H "Content-Type: application/json" \
@@ -58,6 +67,7 @@ curl http://localhost:5000/metrics
 | Endpoint | Method | Description |
 |----------|--------|-------------|
 | `/` | GET | Health check |
+| `/demo` | GET | Interactive web demo interface |
 | `/predict` | POST | Make prediction |
 | `/metrics` | GET | View performance metrics |
 | `/trigger_retrain` | POST | Trigger model retraining |
